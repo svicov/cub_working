@@ -1,7 +1,7 @@
 R         800    600    
-NO        ./textures/bluestone.xpm
+NO  ./textures/bluestone.xpm
 SO ./textures/eagle.xpm
-WE ./textures/greenlight.xpm
+WE ./textures/redbrick.xpm
 EA ./textures/greystone.xpm
 S ./textures/barrel.xpm
 F 229,111,200

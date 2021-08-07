@@ -125,14 +125,14 @@ int  scan1(t_mn *mn)
 		h = round(800 / c);
 		  
 		if (mn->side =='w')
-			color = 0x00991122;
+			risuet_stolbec(mn, color, i, h, mn->west);
 		if (mn->side =='n')
-			color = 0x0011FF22;
+			risuet_stolbec(mn, color, i, h, mn->north);
 		if (mn->side =='e')
-			color = 0x002211FF;
+			risuet_stolbec(mn, color, i, h, mn->east);
 		if (mn->side =='s')
-			color = 0x00999999;
-		cub_square2(mn, color, i, h);
+			risuet_stolbec(mn, color, i, h, mn->south);
+		
 		mn->pl_ugol_ = mn->pl_ugol_ + (PI )/(3 * 800);
 		
 		i= i + 1;

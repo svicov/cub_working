@@ -1,11 +1,11 @@
 #include "cub3d.h"
 #include "mlx.h"
-#include "math.h" // УДАЛИТЬ ПЕРЕД ФИНАЛЬНОЙ СДАЧЕЙ ЕСЛИ НЕ НУЖЕН
+#include "math.h"
 
 void exit_game(t_mn *mn)
 {
 	// FREE
-	mn->temp = 0;
+	(void)mn; 
 	exit(0);
 }
 
@@ -198,7 +198,6 @@ int		draw_image(t_mn *mn)
 	
 	mlx_put_image_to_window(mn->mlxp, mn->winp, mn->imgp, 0, 0);
 	mlx_destroy_image(mn->mlxp, mn->imgp);
-	mlx_put_image_to_window(mn, mn->winp, mn->north.img,0,0);
 	return (0);
 }
 
@@ -268,7 +267,7 @@ void	my_mlx_pixel_put(t_mn *mn, int x, int y, long color)
 	*(unsigned int *)dst = color;
 }
 
-void	 cub_square2(t_mn *mn, int color, int ddx, int ddh)
+void	 risuet_stolbec(t_mn *mn, int color, int ddx, int ddh, t_texture tex)
 {
 	int j;
 	//int i;
@@ -276,20 +275,21 @@ void	 cub_square2(t_mn *mn, int color, int ddx, int ddh)
 	(void)color;
 	j = fmax(0, (mn->conf.heigth - ddh)/2);
 	char *col;
-	
+	int numberOfWallPixel;
+	numberOfWallPixel = fmax(0, -(mn->conf.heigth - ddh)/2);
+
 	while (j < fmin((mn->conf.heigth + ddh)/2, mn->conf.heigth - 1))
 	{
-		col = (char *)mn->north.addr + (int)(j / (double)ddh * mn->north.y)
-		*mn->north.line_length
-		+ (int)(mn->walldistance * (mn->north.x))
-		*(mn->north.bits_per_pixel / 8);
+		col = (char *)tex.addr + (int)(numberOfWallPixel / (double)ddh * tex.y)
+		*tex.line_length
+		+ (int)(mn->walldistance * (tex.x))
+		*(tex.bits_per_pixel / 8);
 		if (*(unsigned int *)col == 4278190080)
 			*(unsigned int *)col = 0;
-		// if (index >= 0 && index < (mn->conf.width - 1) * (mn->conf.heigth - 1))
 			index = mn->conf.width * j + ddx;
 		my_mlx_pixel_put(mn, ddx, j, *(unsigned int *)col);
-		//mn->data[index] = *(unsigned int *)col;
 		j++;
+		numberOfWallPixel++;
 	}
 }
 
@@ -300,6 +300,33 @@ int cub_draw(t_mn *mn, int color, int count, int i)
 		mn->data[i] = color;
 	return(1);
 }
+
+int make_img(t_mn * mn)
+{
+	mn->north.file = mn->conf.no;
+	mn->north.img = mlx_xpm_file_to_image(mn->mlxp,mn->north.file, &mn->north.x, &mn->north.y);
+	if (mn->north.img == 0) // Нужно проверять возвращаемое значение на NULL, и выходить с ошибкой
+		exit(0);
+	mn->north.addr = mlx_get_data_addr(mn->north.img, &mn->north.bits_per_pixel, &mn->north.line_length, &mn->north.endian);
+
+	mn->south.file = mn->conf.so;
+	mn->south.img = mlx_xpm_file_to_image(mn->mlxp,mn->south.file, &mn->south.x, &mn->south.y);
+	mn->south.addr = mlx_get_data_addr(mn->south.img, &mn->south.bits_per_pixel, &mn->south.line_length, &mn->south.endian);
+
+	mn->east.file = mn->conf.ea;
+	mn->east.img = mlx_xpm_file_to_image(mn->mlxp,mn->east.file, &mn->east.x, &mn->east.y);
+	mn->east.addr = mlx_get_data_addr(mn->east.img, &mn->east.bits_per_pixel, &mn->east.line_length, &mn->east.endian);
+
+	mn->west.file = mn->conf.we;
+	mn->west.img = mlx_xpm_file_to_image(mn->mlxp,mn->west.file, &mn->west.x, &mn->west.y);
+	mn->west.addr = mlx_get_data_addr(mn->west.img, &mn->west.bits_per_pixel, &mn->west.line_length, &mn->west.endian);
+
+	mn->sprite.file = mn->conf.s;
+	mn->sprite.img = mlx_xpm_file_to_image(mn->mlxp,mn->sprite.file, &mn->sprite.x, &mn->sprite.y);
+	mn->sprite.addr = mlx_get_data_addr(mn->sprite.img, &mn->sprite.bits_per_pixel, &mn->sprite.line_length, &mn->sprite.endian);
+	return (0);
+}
+
 
 int main(int argc, char **argv)
 {
@@ -361,10 +388,7 @@ int main(int argc, char **argv)
 	mn.pl_y = 2.5;
 	
 	mn.mlxp = mlx_init();
-	mn.north.file =  "/Users/dbombur/Downloads/cub3d6_2_2_a 2/textures/redbrick.xpm";
-	mn.north.img = 
-	mlx_xpm_file_to_image(mn.mlxp,mn.north.file, &mn.north.x, &mn.north.y);
-	mn.north.addr = mlx_get_data_addr(mn.north.img, &mn.north.bits_per_pixel, &mn.north.line_length, &mn.north.endian);
+	make_img(&mn);
 	mn.winp = mlx_new_window(mn.mlxp, mn.conf.width, mn.conf.heigth, "bombur");
 	
 	// mn.imgp = mlx_new_image(mn.mlxp, mn.conf.width, mn.conf.heigth);

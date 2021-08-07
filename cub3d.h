@@ -138,6 +138,7 @@ typedef struct s_mn
 	t_texture south;
 	t_texture west;
 	t_texture east;
+	t_texture sprite;
 	double walldistance;
 } t_mn;
 
@@ -183,7 +184,7 @@ void exit_game(t_mn *mn);
 
 int cub_draw(t_mn *mn, int color, int count, int i);
 void cub_square1(t_mn *mn, int color, int x1, int y1, int x2, int y2);
-void	cub_square2(t_mn *mn, int color, int ddx, int ddh);
+void	risuet_stolbec(t_mn *mn, int color, int ddx, int ddh, t_texture tex);
 //float	valid_ugol(float ug);
 float ray_1(t_mn *mn);
 int  scan1(t_mn *mn);
