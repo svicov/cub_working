@@ -1,0 +1,427 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-apple-darwin11.3.0
+ 
+
+# Make data base, printed on Sat Aug  7 06:17:50 2021
+
+# Variables
+
+ 
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/dbombur/Downloads/cub3d6_2_2_a 2
+# makefile
+SHELL = /bin/sh
+# makefile (from `Makefile', line 12)
+RM = rm -rf
+# environment
+VSCODE_NLS_CONFIG = {"locale":"ru","availableLanguages":{"*":"ru"},"_languagePackId":"61bb67d1dd171f889f18d9055dce1bca.ru","_translationsConfigFile":"/Users/dbombur/Library/Application Support/Code/clp/61bb67d1dd171f889f18d9055dce1bca.ru/tcf.json","_cacheRoot":"/Users/dbombur/Library/Application Support/Code/clp/61bb67d1dd171f889f18d9055dce1bca.ru","_resolvedLanguagePackCoreLocation":"/Users/dbombur/Library/Application Support/Code/clp/61bb67d1dd171f889f18d9055dce1bca.ru/c3f126316369cd610563c75b1b1725e0679adfb3","_corruptedFile":"/Users/dbombur/Library/Application Support/Code/clp/61bb67d1dd171f889f18d9055dce1bca.ru/corrupted.info","_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+# makefile (from `Makefile', line 14)
+CFLAGS = -Wextra -Werror -Wextra -g -Wno-unused -Wunused-parameter 
+# makefile (from `Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# makefile (from `Makefile', line 3)
+SRCS = get_next_line.c get_next_line_utils.c is_r_tekstury.c pars1part.c pars_1part_2.c pars_1part_3.c init.c valid_ugol.c pars2.c true_map.c ft_maxlen.c ft_error.c valid_map.c counting_sp.c
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# makefile (from `Makefile', line 8)
+OBJS = $(SRCS:.c=.o)
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n0001b30000_rr/T/vscode-ipc-7f5a3ac7-58cd-4933-923a-a59eaed0eeb9.sock
+# environment
+VSCODE_CWD = /
+# environment
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.Cz7Bq5hCkv/Render
+# environment
+PATH = /Users/dbombur/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/opt/X11/bin
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.CG0aisnAId/Listeners
+# automatic
+%F = $(notdir $%)
+# environment
+HOMEBREW_TEMP = /tmp/dbombur/Homebrew/Temp
+# environment
+DISPLAY = /private/tmp/com.apple.launchd.aNAgmu1A6L/org.xquartz:0
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /Users/dbombur/Downloads/cub3d6_2_2_a 2
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /Users/dbombur
+# default
+MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/dbombur/Library/Application Support/Code/CachedData/c3f126316369cd610563c75b1b1725e0679adfb3
+# environment
+LOGNAME = dbombur
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XPC_FLAGS = 0x0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+HOMEBREW_CACHE = /tmp/dbombur/Homebrew/Caches
+# environment
+SHLVL = 1
+# makefile (from `Makefile', line 16)
+LIBFT = ./libft/libft.a
+# makefile (from `Makefile', line 10)
+CC = gcc
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = dbombur
+# makefile
+.DEFAULT_GOAL := all
+# makefile (from `Makefile', line 1)
+NAME = cub3D
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+# default
+.VARIABLES := 
+# environment
+TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n0001b30000_rr/T/
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /Users/dbombur/Library/Application Support/Code/1.58.2-main.sock
+# makefile
+MAKEFLAGS = Rrqp
+# makefile (from `Makefile', line 18)
+MFLAGS = -framework OpenGL -framework Appkit
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+XPC_SERVICE_NAME = com.microsoft.VSCode.3848
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+ 
+# environment
+__CF_USER_TEXT_ENCODING = 0x2B18:0x0:0x0
+# default
+MAKEFILES := 
+# environment
+VSCODE_BROWSER_CODE_LOADING = bypassHeatCheck
+# automatic
+<F = $(notdir $<)
+# environment
+LC_ALL = C
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# default
+.INCLUDE_DIRS = /usr/local/include
+# environment
+MAKELEVEL := 0
+# environment
+LANG = C
+# environment
+VSCODE_PID = 41711
+# variable set hash-table stats:
+# Load=72/1024=7%, Rehash=0, Collisions=5/105=5%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 16777232, inode 2592061): 47 files, no impossibilities.
+
+# 47 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+%.o: %.c
+#  commands to execute (from `Makefile', line 23):
+	@$(CC) $(CFLAGS) -c -I./minilibx/ $< -o $(<:.c=.o)
+	
+
+# 1 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+# Not a target:
+pars2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+true_map.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: cub3D libmlx.a
+#  Phony target (prerequisite of .PHONY).
+#  Command-line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+
+is_r_tekstury.o: is_r_tekstury.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `is_r_tekstury'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := is_r_tekstury.o
+# automatic
+# % := 
+# automatic
+# * := is_r_tekstury
+# automatic
+# + := is_r_tekstury.c
+# automatic
+# | := 
+# automatic
+# < := is_r_tekstury.c
+# automatic
+# ^ := is_r_tekstury.c
+# automatic
+# ? := is_r_tekstury.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
+#  commands to execute (from `Makefile', line 23):
+	@$(CC) $(CFLAGS) -c -I./minilibx/ $< -o $(<:.c=.o)
+	
+
+.PHONY: all clean fclean re
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+cub3D: get_next_line.o get_next_line_utils.o is_r_tekstury.o pars1part.o pars_1part_2.o pars_1part_3.o init.o valid_ugol.o pars2.o true_map.o ft_maxlen.o ft_error.o valid_map.o counting_sp.o
+#  Implicit rule search has not been done.
+#  Last modified 2021-08-07 05:32:20
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+#  commands to execute (from `Makefile', line 26):
+	@make -C libft
+	@make -C minilibx
+	@mv minilibx/libmlx.a .
+	@mv libft/libft.a .
+	@$(CC) $(CFLAGS) $(MFLAGS) -o $(NAME) -L. -lmlx -I./minilibx/ libft.a $(OBJS)
+	
+
+# Not a target:
+pars1part.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+get_next_line.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-05-07 17:07:42
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-07 06:17:31
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+valid_map.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+is_r_tekstury.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-07 06:16:04
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+fclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 37):
+	@$(RM) $(NAME) cub3D.bmp libmlx.a
+	
+
+# Not a target:
+ft_maxlen.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+get_next_line_utils.o: get_next_line_utils.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `get_next_line_utils'
+#  Last modified 2021-08-07 05:31:04
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 23):
+	@$(CC) $(CFLAGS) -c -I./minilibx/ $< -o $(<:.c=.o)
+	
+
+# Not a target:
+valid_ugol.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+pars_1part_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libmlx.a:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+re: fclean all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 32):
+	@$(RM) $(OBJS)
+	@make clean -C minilibx
+	
+
+# Not a target:
+init.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+get_next_line_utils.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-05-07 17:07:47
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+counting_sp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+get_next_line.o: get_next_line.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `get_next_line'
+#  Last modified 2021-08-07 05:31:04
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 23):
+	@$(CC) $(CFLAGS) -c -I./minilibx/ $< -o $(<:.c=.o)
+	
+
+# Not a target:
+ft_error.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+pars_1part_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=27/1024=3%, Rehash=0, Collisions=0/72=0%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# Finished Make data base on Sat Aug  7 06:17:50 2021
+
+ 

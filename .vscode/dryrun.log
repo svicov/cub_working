@@ -1,0 +1,12 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/dbombur/Downloads/cub3d6_2_2_a 2'
+gcc -Wextra -Werror -Wextra -g -Wno-unused -Wunused-parameter  -c -I./minilibx/ is_r_tekstury.c -o is_r_tekstury.o
+ 
+make -C libft
+make -C minilibx
+mv minilibx/libmlx.a .
+mv libft/libft.a .
+ 
+gcc -Wextra -Werror -Wextra -g -Wno-unused -Wunused-parameter  -framework OpenGL -framework Appkit -o cub3D -L. -lmlx -I./minilibx/ libft.a get_next_line.o get_next_line_utils.o is_r_tekstury.o pars1part.o pars_1part_2.o pars_1part_3.o init.o valid_ugol.o pars2.o true_map.o ft_maxlen.o ft_error.o valid_map.o counting_sp.o
+make: Leaving directory `/Users/dbombur/Downloads/cub3d6_2_2_a 2'
+ 
